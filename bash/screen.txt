@@ -1,0 +1,21 @@
+###screen
+#to use screen in an ssh session start by calling screen:
+
+screen
+#if screen is activate and the ssh connection drops out then the screen will detach and keep running
+
+#Hit "control + A" to activate screen commands
+
+#to make a new window: "^A" "c"
+
+#to go to previous screen "^a" "p" or "^a" "n"
+
+#to kill a screen "^a" "k" or just "exit"
+
+#to detach a screen "^a" "d"
+
+#to list all screens:
+screen -ls
+
+#to reattach a screen:
+screen -r <Screen name>
