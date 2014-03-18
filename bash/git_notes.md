@@ -1,16 +1,16 @@
-#git stuff...
+# git stuff...
 
-#git workflow:
+##git workflow:
 
-git status
+    git status
 
-git add <file, or .>
+    git add <file, or .>
 
-git diff --staged
+    git diff --staged
 
-git commit -m "<notes>"
+    git commit -m "<notes>"
 
-git push
+    git push
 
 #to see all the branches (*denotes current branch)
 git branch
