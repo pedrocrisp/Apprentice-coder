@@ -1,5 +1,0 @@
-#check size of directories in current folder (human readable)
-du -h -d1
-
-#check size of the home directory
-df -h /home/
