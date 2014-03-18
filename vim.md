@@ -9,5 +9,7 @@ To replace all occurrences:
     :%s,<search pattern>,<replace>,g
 - use `,` to delimit search range
 - use `\` to escape special characters like `~`
+
 eg:
+
     %s,/home/pete/public_html,load http://north1ws.anu.edu.au/\~pete,g
