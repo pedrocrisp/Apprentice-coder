@@ -12,3 +12,7 @@ To copy subdirectories of source directory and only select file type of subdirec
     # --include '*/' # include subdirectories in read folder
     # --include '*.fastq.gz' # include ".fastq.gz" files
     # --exclude '*' # exclude everything else
+
+To further only select some subdirectories, eg the "Sample" directories:
+
+    rsync -rhiv --include 'Sample*/' --include '*.fastq.gz' --exclude '*' ~/<path_to_reads>/reads/ ./
