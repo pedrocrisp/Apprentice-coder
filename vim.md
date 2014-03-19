@@ -1,6 +1,12 @@
 Vim:
 ====
 
+Cheat Sheet:
+------------
+
+[This cheat sheet](http://tnerual.eriogerg.free.fr/vimqrc.pdf) should be glued to your desk, toilet wall, inner eyelid, or anywhere you may possibly need to use vim.
+
+
 Search and replace file path:
 -----------------------------
 
