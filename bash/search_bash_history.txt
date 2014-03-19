@@ -1,1 +1,0 @@
-#search bash history press "control" + "r" then type search term and press "control" + "r" agin to find next, press right arrow to use desired code!
