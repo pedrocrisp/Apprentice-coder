@@ -1,5 +1,7 @@
 # Copying
 
+### NB: If you're ever unsure of what `rsync` will do, run it with the `-n` flag, and it will show you, without clobbing your entire home directory ###
+
 To copy and get info on copy use rsync
 
     rsync -rhiv --progress <source> <desination>
