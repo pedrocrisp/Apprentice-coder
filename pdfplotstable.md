@@ -1,3 +1,8 @@
+##pdfplotstable
+
+Example nice table from csv in latex
+
+```
 \pgfplotstabletypeset[
     col sep=tab,
     string type,
@@ -8,3 +13,4 @@
 every head row/.style={ before row=\toprule,after row=\midrule},
 every last row/.style={ after row=\bottomrule},
     ]{figs/sRNAfigs/el30siRNAFC.csv}
+    ```
