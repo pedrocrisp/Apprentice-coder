@@ -36,6 +36,7 @@ Then on first push set the remote tracking at origin
 To add this branch on other machines/servers, pull and then checkout.  eg on server go to repository then:
 
     git pull
+    git branch -r #see remote branches
     git checkout fixfeatureCounts
 
 Once changes are merged you can delete branch
