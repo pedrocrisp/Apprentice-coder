@@ -17,4 +17,6 @@ Then call the next script
 bash ~pete/gitrepos/NGS-pipelines/RNAseqPipe3/03-runner.sh
 ```
 
-Then hit ```ctr + A``` then ```d```
+Check it is runing using ```htop```.
+
+Then hit ```ctr + A``` then ```d``` to detach the screen and logout.  Good luck.
