@@ -16,6 +16,7 @@ Then call the next script
 ```
 bash ~pete/gitrepos/NGS-pipelines/RNAseqPipe3/03-runner.sh
 ```
+Open a new screen using ```ctr + A``` then ```c```
 
 Check it is runing using ```htop```.
 
