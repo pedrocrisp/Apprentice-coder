@@ -32,7 +32,9 @@ Ask Pete
 Get Packages
 ------------
 
-Go into Rstudio, and make a new script (Ctrl + Shift + N, or this button: [!new](https://raw.githubusercontent.com/rstudio/rstudio/08c762a7a3953a8ee8228c7bcc4e3c94fae5724b/src/gwt/src/org/rstudio/studio/client/common/icons/stock_new.png)). Paste the below into it:
+Go into Rstudio, and make a new script (Ctrl + Shift + N, or this button:
+![new](https://raw.githubusercontent.com/rstudio/rstudio/08c762a7a3953a8ee8228c7bcc4e3c94fae5724b/src/gwt/src/org/rstudio/studio/client/common/icons/stock_new.png)).
+Paste the below into it:
 
     install.packages("ggplot2")
     install.packages("reshape2")
