@@ -39,3 +39,5 @@ Paste the below into it:
     install.packages("ggplot2")
     install.packages("reshape2")
     install.packages("plyr")
+
+Then, press Ctrl + Shift + Enter to run the whole script, installing these pacakges.
