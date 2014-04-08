@@ -7,7 +7,7 @@ library(reshape2)
 library(grDevices)
 
 ##### Data #####
-DataDir <- "drought/"
+DataDir <- "./"
 
 DataRaw <- read.csv(paste0(DataDir, "xrn_drought.csv"))
 names(DataRaw) <- c("Col-0",
