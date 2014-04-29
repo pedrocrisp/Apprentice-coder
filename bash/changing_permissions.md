@@ -1,11 +1,11 @@
 # Changing permissions
 To give access to all files and directories in my work space to my group:
 
-To find directories and grant everyone in my group read write and execute permissions to directories 
+To find directories and grant everyone in my group read write and execute permissions to directories (directories need to be executable) 
 
     find -type d -exec chmod g+rwx {} \;
 
-To find directories and grant everyone in my group read write and execute permissions to files
+To find files and grant everyone in my group read write permissions to files
 
     find -type f -exec chmod g+rw {} \;
 
