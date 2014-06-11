@@ -20,6 +20,10 @@ Read only for everyone for files
     
 Read/write for me and read only for everyone else for files
 
+    find -type f -exec chmod 644 {} \;
+    
+Read/write/excute for me and read only for everyone else for files
+
     find -type f -exec chmod 744 {} \;
 
 Read and execute for everyone for directories
