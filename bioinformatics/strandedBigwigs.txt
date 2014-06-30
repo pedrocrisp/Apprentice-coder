@@ -1,0 +1,38 @@
+Three ways to convert bam/bed file to bigwig, separated by strand
+http://onetipperday.blogspot.com.au/2012/07/three-ways-to-convert-bambed-file-to.html
+Here are three ways to convert bam/bed to bigwig, separated by strand:
+
+
+# -----------  method 1
+
+
+bamToBed -i accepted_hits.bam -split > accepted_hits.bed
+
+
+awk '{if($6=="+") print}' accepted_hits.bed | sort -k1,1 | bedItemOverlapCount mm9 -chromSize=ChromInfo.txt stdin | sort -k1,1 -k2,2n > accepted_hits.plus.bedGraph
+awk '{if($6=="-") print}' accepted_hits.bed | sort -k1,1 | bedItemOverlapCount mm9 -chromSize=ChromInfo.txt stdin | sort -k1,1 -k2,2n | awk '{OFS="\t"; print $1,$2,$3,"-"$4}' > accepted_hits.minus.bedGraph
+
+bedGraphToBigWig accepted_hits.plus.bedGraph ChromInfo.txt accepted_hits.plus.bw
+bedGraphToBigWig accepted_hits.minus.bedGraph ChromInfo.txt accepted_hits.minus.bw
+
+
+# ----------- method 2
+
+bamToBed -i accepted_hits.bam -split > accepted_hits.bed
+
+
+sort -k1,1 accepted_hits.bed | awk -v '{print $0 >> "accepted_hits.bed"$6}'
+bedItemOverlapCount $index -chromSize=ChromInfo.txt accepted_hits.bed+ | sort -k1,1 -k2,2n > accepted_hits.plus.bedGraph
+bedItemOverlapCount $index -chromSize=ChromInfo.txt accepted_hits.bed- | sort -k1,1 -k2,2n | awk '{OFS="\t"; print $1,$2,$3,"-"$4}' > accepted_hits.minus.bedGraph
+
+bedGraphToBigWig accepted_hits.plus.bedGraph ChromInfo.txt accepted_hits.plus.bw
+bedGraphToBigWig accepted_hits.minus.bedGraph ChromInfo.txt accepted_hits.minus.bw
+
+
+# ----------- method 3
+
+bedtools genomecov -ibam -bg -split -strand + -i accepted_hits.bam -g ChromInfo.txt > accepted_hits.plus.bedGraph
+bedtools genomecov -ibam -bg -split -strand - -i accepted_hits.bam -g ChromInfo.txt > accepted_hits.minus.bedGraph
+
+bedGraphToBigWig accepted_hits.plus.bedGraph ChromInfo.txt accepted_hits.plus.bw
+bedGraphToBigWig accepted_hits.minus.bedGraph ChromInfo.txt accepted_hits.minus.bw
