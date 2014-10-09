@@ -11,7 +11,7 @@ On Lunix
 
 On osX
 
-    for report in  Sample_*/Sample_*_fastqc/fastqc_report.html
+    for report in  Sample_*/*fastqc.html
     do
     open "file://$(greadlink -f $report)" &
     done
