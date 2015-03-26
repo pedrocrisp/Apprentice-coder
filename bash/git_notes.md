@@ -39,6 +39,11 @@ To add this branch on other machines/servers, pull and then checkout.  eg on ser
     git branch -r #see remote branches
     git checkout fixfeatureCounts
 
+Once changes are finalised/tested switch back to master and merge
+
+    git checkout master
+    git merge fixfeatureCounts
+
 Once changes are merged you can delete branch
 
     git branch -d fixfeatureCounts
