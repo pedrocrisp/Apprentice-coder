@@ -1,4 +1,5 @@
 # Changing permissions
+## Linux
 To give access to all files and directories in my work space to my group:
 
 To find directories and grant everyone in my group read write and execute permissions to directories (directories need to be executable) 
@@ -29,3 +30,13 @@ Read/write/excute for me and read only for everyone else for files
 Read and execute for everyone for directories
 
     find -type d -exec chmod 555 {} \;
+
+## OSX
+
+Read and execute for everyone for directories within the current directory
+
+    find ./ -type d -exec chmod 555 {} \;
+
+Read only for everyone for files within the current dir
+
+    find ./ -type f -exec chmod 444 {} \;
