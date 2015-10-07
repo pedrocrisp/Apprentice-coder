@@ -16,7 +16,7 @@ http://north1ws.anu.edu.au/~pete/igv/Exp277_EL_drought_RNAseq/Exp277_EL_drought_
 
 ######
 To make load a bunch of files into a new IGV session 
--run the igv_batch.command script 
+-run the igv_batch.command script (or simply launch igv on the cmd line, depending how you have installed it)
 -add the -b flag and supply a batch file 
 -batch file format:
 new
