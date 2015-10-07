@@ -24,6 +24,10 @@ load <path_to_bam1>
 load <path_to_bam2>
 etc
 
+to obtain the list of paths to your bams/bigWigs you might consider using ls
+eg
+ls /home/user/data/exp/Sample*/*.bam
+
 eg launch on mac and get batch file from north1ws:
 $ bash /Applications/IGV_2.3.18/igv_batch.command -b http://north1ws.anu.edu.au/~pete/igv/data/Exp277_xrn_RNAseq/wigs.txt
 
